@@ -3,7 +3,7 @@
     <head><script src="../assets/js/color-modes.js"></script>
 
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="My Dad's Business Website">
         <meta name="author" content="Titus Amedjoe">
         <meta name="generator" content="">
@@ -252,9 +252,29 @@
               </footer>
           </section>
           
-<script src="../DADS COMPANYS WEBSITE/javascript/index.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+  ///Scaling page 80%///
+function scalePage() {
+    document.body.style.transform = 'scale(0.8)';
+    document.body.style.width = (100 / 0.8) + '%';
+    document.body.style.height = (100 / 0.8) + '%';
+}
+
+window.addEventListener('load', scalePage);
+window.addEventListener('resize', scalePage);
+
+///Making Arrow respond to clicks///
+document.querySelector('.scroll-down-arrow').addEventListener('click', function() {
+    // Example: Scroll to a section with id 'features' on click
+    const featuresSection = document.getElementById('features');
+    featuresSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+
+</script>
 
     </body>
 </html>

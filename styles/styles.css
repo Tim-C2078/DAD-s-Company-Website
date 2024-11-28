@@ -140,8 +140,6 @@ html, body {
   transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* Adds depth without shadows */
 }
 
-
-
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -161,6 +159,7 @@ html, body {
   color: #000; /* Change to your desired color */
   text-decoration: none; /* Remove default underline */
 }
+
 .nav-masthead .nav-link::after {
   content: '';
   position: absolute;
@@ -171,6 +170,7 @@ html, body {
   background-color: white; /* Change to your desired color */
   transition: width 0.3s, left 0.3s;
 }
+
 .nav-masthead .nav-link:hover::after {
   width: 100%;
   left: 0;
@@ -181,6 +181,7 @@ html, body {
     width: 100%;
     left: 0;
 }
+
 .nav-masthead .nav-link.active {
     font-weight: bold; /* Optional: to highlight active link */
 }
@@ -362,13 +363,15 @@ html, body {
 }
 
 .scroll-down-arrow {
-  position: absolute;
+  position: fixed; /* Keeps the arrow fixed relative to the viewport */
   bottom: 20px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
-  animation: arrowBounce 2s infinite;
+  animation: arrowBounce 2s infinite; /* Retains the bounce animation */
   cursor: pointer;
+  z-index: 1000; /* Ensures the arrow stays above other content */
 }
+
 
 .scroll-down-arrow span {
   display: block;
