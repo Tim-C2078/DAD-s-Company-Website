@@ -1,5 +1,6 @@
 ///Scaling page 80%///
 function scalePage() {
+    console.log("Scaling applied");
     document.body.style.transform = 'scale(0.8)';
     document.body.style.width = (100 / 0.8) + '%';
     document.body.style.height = (100 / 0.8) + '%';
